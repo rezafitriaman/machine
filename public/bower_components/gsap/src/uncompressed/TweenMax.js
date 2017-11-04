@@ -11,6 +11,8 @@
  * 
  * @author: Jack Doyle, jack@greensock.com
  **/
+
+
 var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window; //helps ensure compatibility with AMD/RequireJS and CommonJS/Node
 (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push( function() {
 

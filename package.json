@@ -1,0 +1,19 @@
+{
+  "name": "machine",
+  "version": "1.0.0",
+  "description": "machine greenshock",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rezafitriaman/machine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rezafitriaman/machine/issues"
+  },
+  "homepage": "https://github.com/rezafitriaman/machine#readme"
+}
