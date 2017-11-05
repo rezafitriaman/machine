@@ -406,7 +406,8 @@ var scene = new ScrollMagic.Scene({
 			force3D:true
 		}, 0.2);
     })
-    .addTo(ctrl);
+    .addTo(ctrl)
+    .reverse(false);
 
 
 
