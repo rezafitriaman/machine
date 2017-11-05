@@ -24,18 +24,21 @@ $( document ).ready(function() {
 	var checkOne_Line_x = $('.check_one_wrapper .line_x');
 	var checkOne_Line_y = $('.check_one_wrapper .line_y');
 	var checkOne_CircleBig = $('.check_one_wrapper .circle_big');
+	var checkOne_CircleBigFont = $('.check_one_wrapper .circle_big .fa');
 	var checkOne_Text = $('.check_one_wrapper .text');
 
 	var checkTwo_Circle = $('.check_two_wrapper .circle');
 	var checkTwo_Line_x = $('.check_two_wrapper .line_x');
 	var checkTwo_Line_y = $('.check_two_wrapper .line_y');
 	var checkTwo_CircleBig = $('.check_two_wrapper .circle_big');
+	var checkTwo_CircleBigFont = $('.check_two_wrapper .circle_big .fa');
 	var checkTwo_Text = $('.check_two_wrapper .text');
 
 	var checkThree_Circle = $('.check_three_wrapper .circle');
 	var checkThree_Line_x = $('.check_three_wrapper .line_x');
 	var checkThree_Line_y = $('.check_three_wrapper .line_y');
 	var checkThree_CircleBig = $('.check_three_wrapper .circle_big');
+	var checkThree_CircleBigFont = $('.check_three_wrapper .circle_big .fa');
 	var checkThree_Text = $('.check_three_wrapper .text');
 
 	var tl_phase_one = new TimelineLite();
@@ -142,6 +145,10 @@ $( document ).ready(function() {
    				width: 20,
 				ease: Power1.easeOut
 			}, 'checks+=0.4')
+			.to(checkOne_CircleBigFont, 0.5, {
+				fontSize: 14,
+				ease: Power1.easeOut
+			}, 'checks+=0.4')
 			.fromTo(checkOne_Text, 0.5, {
 				opacity : 0,
 				x: -20,
@@ -200,6 +207,10 @@ $( document ).ready(function() {
    				width: 20,
 				ease: Power1.easeOut
 			}, 'checks_two+=0.4')
+			.to(checkTwo_CircleBigFont, 0.5, {
+				fontSize: 14,
+				ease: Power1.easeOut
+			}, 'checks+=0.4')
 			.fromTo(checkTwo_Text, 0.5, {
 				opacity : 0,
 				x: -20,
@@ -304,6 +315,10 @@ $( document ).ready(function() {
    				width: 20,
 				ease: Power1.easeOut
 			}, 'checks_three+=0.4')
+			.to(checkThree_CircleBigFont, 0.5, {
+				fontSize: 14,
+				ease: Power1.easeOut
+			}, 'checks+=0.4')
 			.fromTo(checkThree_Text, 0.5, {
 				opacity : 0,
 				x: -20,

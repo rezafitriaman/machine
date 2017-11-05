@@ -1,10 +1,51 @@
 @import 'repeat';
 
+
+.navbar {
+	.navbar-header {
+		.navbar-brand {
+			color: #cc0000;
+		}
+	}
+}
+
+#header_frontpage {
+	background-image: url("../../img/header.png");
+	height: 250px;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    .wrapper_text {
+    	color: white;
+	    margin-top: 100px;
+	    z-index: 99999;
+	    position: relative;
+	    .title {
+	   		font-size: 30px;
+	   		font-weight: 700;
+	    }
+	    .subtitle {
+	    	font-size: 20px;
+	   		font-weight: 700;
+	    }
+    }
+
+}
+#header_frontpage::after {
+	content: '';
+    background-color: rgba(0, 0, 0, 0.73);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+
 .animation {
-	margin-top: 65px;
 	font-family: 'Lato', sans-serif;
 	background-color: #F9F9F9;
-
+	padding-top: 30px;
 	.cijfer {
 		position: relative;
 		top: 12px;
@@ -180,6 +221,12 @@
 				    top: -105px;
 				    left: 135px;
 				    z-index: 15;
+				    .fa {
+				    	position: relative;
+					    left: 3px;
+					    color: white;
+					    font-size: 0px;
+				    }
 		    	}
 		    	.text {
 		    		position: absolute;
@@ -231,6 +278,12 @@
 				    top: -118px;
 				    left: 421px;
 				    z-index: 15;
+				    .fa {
+				    	position: relative;
+					    left: 3px;
+					    color: white;
+					    font-size: 0px;
+				    }
 		    	}
 		    	.text {
 		    		position: absolute;
@@ -283,6 +336,12 @@
 				    top: -138px;
     				left: 786px;
 				    z-index: 15;
+				    .fa {
+				    	position: relative;
+					    left: 3px;
+					    color: white;
+					    font-size: 0px;
+				    }
 		    	}
 		    	.text {
 		    		position: absolute;
@@ -354,6 +413,7 @@
 
 .explain {
 	margin-top: 500px;
+	margin-bottom: 30px;
 	.cijfer {
 		position: relative;
 		top: 12px;
@@ -375,6 +435,44 @@
 	.title_two {
 		.red {
 			color: #CC0000;
+		}
+	}
+}
+
+.section_three {
+	background-color: #F9F9F9;
+	padding-top: 30px;
+	.cijfer {
+		position: relative;
+		top: 12px;
+
+		.circle {
+			display: block;
+		    border: 3px solid #c3c3c3;
+		    border-radius: 100%;
+		    height: 40px;
+		    width: 40px;
+		    position: absolute;
+		    bottom: -9px;
+		    right: 40px;
+		}
+	}
+	.title_one {
+		border-right: 1px solid #c3c3c3;
+	}
+	.title_two {
+		.red {
+			color: #CC0000;
+		}
+	}
+	.wrapper_content {
+		margin-top: 65px;
+		.list {
+			list-style-type: none;
+    		padding-left: 0px;
+    		.list_item {
+    			margin-bottom: 45px;
+    		}
 		}
 	}
 }
