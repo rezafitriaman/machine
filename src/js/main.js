@@ -45,6 +45,7 @@ $( document ).ready(function() {
 	var tl_phase_two = new TimelineLite();
 	var tl_phase_three = new TimelineLite();
 
+
 	function phase_one() {
 		console.log('phase 1 start');
 		window.tl = tl_phase_one;
@@ -373,7 +374,40 @@ $( document ).ready(function() {
 			
 	}
 
-		
+
+/*		var scene = new ScrollMagic.Scene({
+			triggerElement: '.section_three .wrapper_content .list_item' // point of execution
+		});
+		var listStagger = $('.section_three .wrapper_content .list_item');
+		TweenMax.staggerFrom(listStagger, 2, {
+			scale:0.9, 
+			opacity:0, 
+			delay:0.5, 
+			ease:Elastic.easeOut, 
+			force3D:true
+		}, 0.2);*/
+var ctrl = new ScrollMagic.Controller();
+
+// create scene
+var scene = new ScrollMagic.Scene({
+        triggerElement: "#trigger"
+    })
+    .on('start', function () {
+        console.log("passed trigger");
+        var listStagger = $('.section_three .wrapper_content .list_item');
+		TweenMax
+		.staggerFrom(listStagger, 2, {
+			display: 'none',
+			scale:0.9, 
+			opacity:0,
+			display: 'block',
+			delay:0.5, 
+			ease:Elastic.easeOut, 
+			force3D:true
+		}, 0.2);
+    })
+    .addTo(ctrl);
+
 
 
 
