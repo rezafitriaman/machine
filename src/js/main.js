@@ -48,7 +48,7 @@ $( document ).ready(function() {
 
 	function phase_one() {
 		console.log('phase 1 start');
-		window.tl = tl_phase_one;
+		tl_phase_one.pause();
 		tl_phase_one.to(kraan_haak_met_doosje_m1, 1, {
 				opacity: 1
 			})
@@ -66,7 +66,6 @@ $( document ).ready(function() {
 			});
 	}
 
-	phase_one();
 
 	function phase_two() {
 		console.log('phase 2 start')
@@ -282,10 +281,10 @@ $( document ).ready(function() {
 			.add('checks_three')
 
 			/*preview*/
-			.to(preview, 2, {
+			.to(preview, 1, {
 				opacity: 1,
 				scale: 1.1,
-				ease: Sine.easeOut
+				ease: SlowMo.ease.config(0.7, 0.7, false)
 			})
 
 			/*check three*/
@@ -374,41 +373,58 @@ $( document ).ready(function() {
 			
 	}
 
+	/*Start animation*/
+	$('#startAnimation').on('click', function() {
+	    console.log('play');
+	    tl_phase_one.play();
+	});
 
-/*		var scene = new ScrollMagic.Scene({
-			triggerElement: '.section_three .wrapper_content .list_item' // point of execution
-		});
-		var listStagger = $('.section_three .wrapper_content .list_item');
-		TweenMax.staggerFrom(listStagger, 2, {
-			scale:0.9, 
-			opacity:0, 
-			delay:0.5, 
-			ease:Elastic.easeOut, 
-			force3D:true
-		}, 0.2);*/
-var ctrl = new ScrollMagic.Controller();
+	phase_one();
 
-// create scene
-var scene = new ScrollMagic.Scene({
-        triggerElement: "#trigger"
-    })
-    .on('start', function () {
-        console.log("passed trigger");
-        var listStagger = $('.section_three .wrapper_content .list_item');
-		TweenMax
-		.staggerFrom(listStagger, 2, {
-			display: 'none',
-			scale:0.9, 
-			opacity:0,
-			display: 'block',
-			delay:0.5, 
-			ease:Elastic.easeOut, 
-			force3D:true
-		}, 0.2);
-    })
-    .addTo(ctrl)
-    .reverse(false);
+	function staggerListBenefits() {
+		// create scene list
+		var ctrl = new ScrollMagic.Controller();
+		var scene = new ScrollMagic.Scene({
+		        triggerElement: "#trigger"
+		    })
+		    .on('start', function () {
+		        var listStagger = $('.section_three .wrapper_content .list_item');
 
+				TweenMax
+				.staggerTo(listStagger, 2, {
+					scale:1, 
+					opacity:1,
+					delay:0.5, 
+					ease:Expo.easeOut, 
+					force3D:true
+				}, 0.2);
+		    })
+		    .addTo(ctrl)
+		    .reverse(false);
+	}    
+	staggerListBenefits();
+
+	function staggerIconList() {
+		// create scene list
+		var ctrl = new ScrollMagic.Controller();
+		var scene = new ScrollMagic.Scene({
+		        triggerElement: "#trigger_icon"
+		    })
+		    .on('start', function () {
+		        var listStagger = $('.icon');
+
+				TweenMax.staggerTo(listStagger, 2, {
+					scale:1, 
+					opacity:1, 
+					delay:0.5, 
+					ease:Elastic.easeOut, 
+					force3D:true
+				}, 0.2);
+		    })
+		    .addTo(ctrl)
+		    .reverse(false);
+	}
+	staggerIconList();
 
 
 
