@@ -425,9 +425,7 @@ $( document ).ready(function() {
 		    .reverse(false);
 	}
 	staggerIconList();
-
-
-
+      
 });
 
  /*================================= oudside document ready (initMap) ===============================*/
